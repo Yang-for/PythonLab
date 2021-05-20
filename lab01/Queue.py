@@ -68,7 +68,7 @@ class LinkQueue():
             return num
 
 
-class TestJP():
+class TestJP():  #约瑟夫环问题
     def Josephus(self, n, k):
         qu = LinkQueue()
         i = 1
@@ -79,7 +79,7 @@ class TestJP():
         count = 0
         while qu.GetQueueLength() > 1:
             iNum = 1
-            while iNum != k:
+            while iNum != k: #通过删除后加入队列形成约瑟夫环
                 tData = qu.DeQueue()
                 qu.EnQueue(tData)
                 iNum = iNum + 1
