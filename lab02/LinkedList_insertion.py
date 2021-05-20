@@ -5,8 +5,8 @@ def insert_sort_linkedlist(a):
         node_i = a.head.next.next  # node at position 1
         node_i_pre = a.head.next
         i = 1
-        while i < len(a):
-            node_j_pre = a.head
+        while i < len(a): #循环等价于链表不断前进
+            node_j_pre = a.head #node_j相当于开始进行插入排序
             node_j = a.head.next
             j = 0
             while j < i and node_j.data <= node_i.data:
@@ -59,7 +59,7 @@ class LinkedList:
             rep = rep[:-2]
         return '[' + rep + ']'
 
-    def locate(self, pos):
+    def locate(self, pos):#可以运用这种方法
         if pos < 0 and pos >= len(self):
             print('Index out of range!')
             return None
